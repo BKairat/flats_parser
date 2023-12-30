@@ -1,0 +1,20 @@
+version: '3'
+
+services:
+  flask:
+    build: .
+    ports:
+      - "8080:8080"
+    depends_on:
+      - database
+    environment:
+      DATABASE_URL: postgresql://user_test:12345@database:5432/flats
+
+  database:
+    image: postgres
+    ports:
+      - "5432:5432"
+    environment:
+      POSTGRES_DB: flats
+      POSTGRES_USER: user_test
+      POSTGRES_PASSWORD: 12345

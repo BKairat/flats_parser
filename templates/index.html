@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+    <h1 style="text-align: center;">Parsed flats</h1>
+    <form method="post" action="/">
+        <label for="user_input">Enter number of flats you want to parse (max input 700):</label>
+        <input type="text" id="user_input" name="user_input" required>
+        <button type="submit">Submit</button>
+    </form>
+    <p> {{element}} elements were received </p>
+    {% for row in rows %}
+        <div style="text-align: center;"><h2>{{row[1]}}</h2> <img src={{row[2]}}></div><br>
+    {% endfor %}
+</body>
+</html>

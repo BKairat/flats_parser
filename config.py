@@ -1,0 +1,5 @@
+db_name = 'flats'
+db_user = 'user_test'
+db_password = '12345'
+db_host = '127.0.0.1'
+db_port = '5432'
